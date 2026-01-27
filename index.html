@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wookkaao Company Profile</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:0;
+    background:#f5f7fa;
+    height:1200px;
+}
+
+
+.container{
+    width:1100px;
+    height:1200px;
+    margin:20px auto;
+    background:#ffffff;
+    display:flex;
+    position:relative;
+}
+
+
+.left{
+    width:60%;
+    color:white;
+    padding:50px;
+    position:relative;
+}
+
+.logo{
+    width:550px;
+    margin-left: 50px;
+    margin-top: 100px;
+    position: absolute;
+    z-index: 2;
+
+}
+.background_com{
+    width:1000px;
+    height: 550px;
+    display:block;
+    position:absolute;
+    z-index: 1;
+    filter:blur(10px);
+}
+
+.about-title{
+    margin-top:290px;
+    margin-left: 150px;;
+    font-size:22px;
+    border-bottom:2px solid #ffffff;
+    display:inline-block;
+    padding-bottom:5px;
+    position:absolute;
+    z-index: 2;
+}
+
+.about-text{
+    margin-top:350px;
+    margin-left: 60px;
+    line-height:1.6;
+    font-size:15px;
+    color:#e0e6ed;
+    position: absolute;
+    z-index: 2;
+}
+
+.leftbottom{
+ margin-top:585px;
+}
+.section-title{
+    padding-top: 5px;
+    margin-left: 80px;
+    font-size:22px;
+   color:#0b3c5d;
+   display: inline-block;
+   border-bottom:3px solid#0b3c5d;
+   font-weight: bold;
+}
+
+.point{
+    
+     margin-left: 100px;
+     font-size:25px;
+
+}
+
+
+.point p{
+    margin:5px 0 0;
+    font-size:14px;
+}
+.point-name{
+    margin-top: 25px;
+    padding-bottom:5px;
+    font-size: 29px;
+    color:#0b3c5d;
+}
+.point-explain{
+    color:#0b3c5d;
+    margin-bottom: 110px;
+}
+
+.lists{
+    margin:8px 0;
+    font-size:15px;
+
+}
+.point-explain1{
+    color:#0b3c5d;
+     padding-bottom:7px;
+    
+}
+
+
+.right{
+    width:40%;
+    padding:30px;
+    position:relative;
+    margin-top:180px;
+}
+
+
+.circle{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    border:8px solid #0b3c5d;
+    overflow:hidden;
+    margin:20px auto;
+    z-index: 5;
+    margin-top:400px;
+    position: absolute;
+}
+.circle1{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    border:8px solid #0b3c5d;
+    overflow:hidden;
+    margin-top: 200px;
+    position:absolute;
+    z-index: 4;
+    object-fit:cover;
+}
+.circle2{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    border:8px solid #0b3c5d;
+    overflow:hidden;
+    margin-top: 480px;
+    margin-top: 5px;
+    position:absolute;
+    z-index: 3;
+    object-fit:cover;
+}
+.circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.circle1 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.circle2 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+.contact{
+    background:#0b3c5d;
+    color:white;
+    border-radius:50px;
+    text-align:center;
+     margin-top:790px;
+    margin-left: 110px;
+   height:90px;
+   display:flex;
+   flex-direction: row;
+}
+
+.contact-info{
+    color:white;
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    padding: 0px;
+    text-decoration: none;
+}
+.tel-icon{
+    width:100px;
+    height:80px;
+    border-radius: 50%;
+    filter:brightness(10px);
+    display:inline-block;
+    background-color: #0b3c5d;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <img class="background_com" src="company.png">
+        <div>
+            <img  class="logo"src="logo-wookaoo-blue.png">
+        </div>
+
+        <div class="about-title"> <b>  ABOUT COMPANY  </b></div>
+        <div class="about-text">
+            Wookkaao (OPC) Private Limited is an India-based web design and digital solutions company focused on helping businesses succeed in the digital world. The company provides end-to-end services including website and mobile app development, digital marketing, branding, and IT consulting, ensuring modern, user-friendly, and scalable solutions. By combining creative design with the latest technologies, Wookkaao helps businesses strengthen their online presence, improve customer engagement, and achieve sustainable growth.
+        </div>
+        <div class="leftbottom">
+        <div class="section-title"> <b>WHY CHOOSE US?</b></div>
+
+        <div class="point">
+            <p class="point-name"><b>&#8226;    CUSTOMIZED DIGITAL SOLUTIONS</b></p>
+            <p class="point-explain">Tailor-made websites and applications built for<br> your business needs.</p>
+        </div>
+
+        <div class="point">
+            <p class="point-name"><b>&#8226;    CREATIVE & INNOVATIVE IDEAS</b></p>
+            <p class="point-explain">Modern designs and smart technology for<br> impactful digital presence.</p>
+        </div>
+
+        <div class="point">
+            <p class="point-name"><b>&#8226;    CLIENT-FOCUSED APPROACH</b></p>
+            <p class="point-explain">Dedicated support with solutions aligned to<br> your goals.</p>
+        </ul>
+        </div>
+
+        <div class="section-title"><b>WHAT WE PROVIDE</b></div>
+         <div class="point">
+            <p class="point-explain1">&#8226; Web & App Development</p>
+            <p class="point-explain1">&#8226; Branding & Graphic Design</p>
+            <p class="point-explain1">&#8226; Digital Marketing</p>
+            <p class="point-explain1">&#8226; AI-Powered Solutions</p>
+            </div>
+    </div>
+    </div>
+
+    <div class="right">
+        <div class="circle">
+            <img src="pexels-photo-3184291.jpeg" alt="Office">
+        </div>
+
+        <div class="circle1">
+            <img src="pexels-photo-3184299.jpeg" alt="Handshake">
+        </div>
+
+        <div class="circle2">
+            <img src="pexels-sora-shimazaki-5673488.jpg" alt="Meeting">
+        </div>
+
+          <div class="contact">
+            <img class="tel-icon" src="ChatGPT Image Jan 25, 2026, 07_54_31 PM.png">
+            <div class="contact-text">
+                <p class="contact-info"><b>Contact Us</b></p>
+                <a class="contact-info" href="tel:8595966733">859-596-6733</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
