@@ -1,289 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="height=device-height, initial-scale=1.0">
-<title>Wookkaao Company Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1100">
+    <title>Wookkaao Company Profile</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-<style>
-*{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+        body {
+            background: #f5f7fa;
+            width: 1100px;
+            margin: 0 auto;
+        }
 
-body{
-    margin:0;
-    background:#f5f7fa;
-    height:1200px;
-}
+        .container {
+            width: 1100px;
+            min-height: 1000px;
+            background: #ffffff;
+            display: grid;
+            grid-template-columns: 650px 450px; /* Rigid column widths */
+            position: relative;
+            overflow: hidden;
+        }
 
+        /* --- LEFT PANEL --- */
+        .left {
+            position: relative;
+            background: white;
+        }
 
-.container{
-    width:1100px;
-    height:1200px;
-    margin:20px auto;
-    background:#ffffff;
-    display:flex;
-    flex-wrap: nowrap;
-    position:relative;
-}
+        .background_com {
+            width: 1000px; /* Matches your original design width */
+            height: 550px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            filter: blur(10px);
+            object-fit: cover;
+        }
 
+        .hero-overlay {
+            position: relative;
+            z-index: 2;
+            padding: 80px 60px;
+            color: white;
+        }
 
-.left{
-    width:60%;
-    color:white;
-    padding:50px;
-    position:relative;
-}
+        .logo {
+            width: 400px;
+            margin-bottom: 40px;
+        }
 
-.logo{
-    width:550px;
-    margin-left: 50px;
-    margin-top: 100px;
-    position: absolute;
-    z-index: 2;
+        .about-title {
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+            display: inline-block;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
 
-}
-.background_com{
-    width:1000px;
-    height: 550px;
-    display:block;
-    position:absolute;
-    z-index: 1;
-    filter:blur(10px);
-}
+        .about-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #e0e6ed;
+            max-width: 500px;
+        }
 
-.about-title{
-    margin-top:290px;
-    margin-left: 150px;;
-    font-size:22px;
-    border-bottom:2px solid #ffffff;
-    display:inline-block;
-    padding-bottom:5px;
-    position:absolute;
-    z-index: 2;
-}
+        .content-bottom {
+            padding: 40px 60px;
+            color: #0b3c5d;
+            margin-top: 2px;
+        }
 
-.about-text{
-    margin-top:350px;
-    margin-left: 60px;
-    line-height:1.6;
-    font-size:15px;
-    color:#e0e6ed;
-    position: absolute;
-    z-index: 2;
-}
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 3px solid #0b3c5d;
+            display: inline-block;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
 
-.leftbottom{
- margin-top:585px;
-}
-.section-title{
-    padding-top: 5px;
-    margin-left: 80px;
-    font-size:22px;
-   color:#0b3c5d;
-   display: inline-block;
-   border-bottom:3px solid#0b3c5d;
-   font-weight: bold;
-}
+        .point {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
 
-.point{
-    
-     margin-left: 100px;
-     font-size:25px;
+        .point-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-}
+        .point-explain {
+            font-size: 15px;
+            margin-top: 5px;
+        }
 
+        /* --- RIGHT PANEL --- */
+        .right {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 150px;
+        }
 
-.point p{
-    margin:5px 0 0;
-    font-size:14px;
-}
-.point-name{
-    margin-top: 25px;
-    padding-bottom:5px;
-    font-size: 29px;
-    color:#0b3c5d;
-}
-.point-explain{
-    color:#0b3c5d;
-    margin-bottom: 110px;
-}
+        .circle-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+        }
 
-.lists{
-    margin:8px 0;
-    font-size:15px;
+        .circle {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 8px solid #0b3c5d;
+            overflow: hidden;
+            position: absolute;
+            background: white;
+        }
 
-}
-.point-explain1{
-    color:#0b3c5d;
-     padding-bottom:7px;
-    
-}
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        /* Positions adjusted to match image_d6c052.png precisely */
+        .c1 { top: 0; right: 80px; z-index: 3; }
+        .c2 { top: 230px; right: 90px; z-index: 2; }
+        .c3 { top: 450px; right: 80px; z-index: 1; }
 
-.right{
-    width:40%;
-    padding:30px;
-    position:relative;
-    margin-top:180px;
-}
+        .contact-pill {
+            position: absolute;
+            bottom: 80px;
+            right: 40px;
+            background: #0b3c5d;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            width: 320px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
+        .tel-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            filter: brightness(0) invert(1);
+        }
 
-.circle{
-    width:230px;
-    height:230px;
-    border-radius:50%;
-    border:8px solid #0b3c5d;
-    overflow:hidden;
-    margin:20px auto;
-    z-index: 5;
-    margin-top:400px;
-    position: absolute;
-}
-.circle1{
-    width:230px;
-    height:230px;
-    border-radius:50%;
-    border:8px solid #0b3c5d;
-    overflow:hidden;
-    margin-top: 200px;
-    position:absolute;
-    z-index: 4;
-    object-fit:cover;
-}
-.circle2{
-    width:230px;
-    height:230px;
-    border-radius:50%;
-    border:8px solid #0b3c5d;
-    overflow:hidden;
-    margin-top: 480px;
-    margin-top: 5px;
-    position:absolute;
-    z-index: 3;
-    object-fit:cover;
-}
-.circle img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-.circle1 img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-.circle2 img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+        .contact-text b { font-size: 16px; display: block; }
+        .contact-text span { font-size: 22px; font-weight: bold; }
 
-
-.contact{
-    background:#0b3c5d;
-    color:white;
-    border-radius:50px;
-    text-align:center;
-     margin-top:790px;
-    margin-left: 110px;
-   height:90px;
-   display:flex;
-   flex-direction: row;
-}
-
-.contact-info{
-    color:white;
-    font-size: 22px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    padding: 0px;
-    text-decoration: none;
-}
-.tel-icon{
-    width:100px;
-    height:80px;
-    border-radius: 50%;
-    filter:brightness(10px);
-    display:inline-block;
-    background-color: #0b3c5d;
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-</style>
+    </style>
 </head>
-
 <body>
 
 <div class="container">
-
     <div class="left">
-        <img class="background_com" src="company.png">
-        <div>
-            <img  class="logo"src="logo-wookaoo-blue.png">
+        <img class="background_com" src="company.png" alt="Background">
+        
+        <div class="hero-overlay">
+            <img class="logo" src="logo-wookaoo-blue.png" alt="Wookkaao Logo">
+            <div class="about-title">ABOUT COMPANY</div>
+            <p class="about-text">
+              Wookkaao (OPC) Private Limited is an India-based web design and digital solutions company focused on helping businesses succeed in the digital world. The company provides end-to-end services including website and mobile app development, digital marketing, branding, and IT consulting, ensuring modern, user-friendly, and scalable solutions. By combining creative design with the latest technologies, Wookkaao helps businesses strengthen their online presence, improve customer engagement, and achieve sustainable growth.
+            </p>
         </div>
 
-        <div class="about-title"> <b>  ABOUT COMPANY  </b></div>
-        <div class="about-text">
-            Wookkaao (OPC) Private Limited is an India-based web design and digital solutions company focused on helping businesses succeed in the digital world. The company provides end-to-end services including website and mobile app development, digital marketing, branding, and IT consulting, ensuring modern, user-friendly, and scalable solutions. By combining creative design with the latest technologies, Wookkaao helps businesses strengthen their online presence, improve customer engagement, and achieve sustainable growth.
-        </div>
-        <div class="leftbottom">
-        <div class="section-title"> <b>WHY CHOOSE US?</b></div>
-
-        <div class="point">
-            <p class="point-name"><b>&#8226;    CUSTOMIZED DIGITAL SOLUTIONS</b></p>
-            <p class="point-explain">Tailor-made websites and applications built for<br> your business needs.</p>
-        </div>
-
-        <div class="point">
-            <p class="point-name"><b>&#8226;    CREATIVE & INNOVATIVE IDEAS</b></p>
-            <p class="point-explain">Modern designs and smart technology for<br> impactful digital presence.</p>
-        </div>
-
-        <div class="point">
-            <p class="point-name"><b>&#8226;    CLIENT-FOCUSED APPROACH</b></p>
-            <p class="point-explain">Dedicated support with solutions aligned to<br> your goals.</p>
-        </ul>
-        </div>
-
-        <div class="section-title"><b>WHAT WE PROVIDE</b></div>
-         <div class="point">
-            <p class="point-explain1">&#8226; Web & App Development</p>
-            <p class="point-explain1">&#8226; Branding & Graphic Design</p>
-            <p class="point-explain1">&#8226; Digital Marketing</p>
-            <p class="point-explain1">&#8226; AI-Powered Solutions</p>
+        <div class="content-bottom">
+            <div class="section-title">WHY CHOOSE US?</div>
+            <div class="point">
+                <p class="point-name">&#8226; CUSTOMIZED DIGITAL SOLUTIONS</p>
+                <p class="point-explain">Tailor-made websites and applications built for your business needs.</p>
             </div>
-    </div>
+            <div class="point">
+                <p class="point-name">&#8226; CREATIVE & INNOVATIVE IDEAS</p>
+                <p class="point-explain">Modern designs and smart technology for impactful digital presence.</p>
+            </div>
+            <div class="point">
+                <p class="point-name">&#8226; CLIENT-FOCUSED APPROACH</p>
+            <p class="point-explain">Dedicated support with solutions aligned to<br> your goals.</p>
+            </div>
+
+            <div class="section-title">WHAT WE PROVIDE</div>
+            <div class="point" style="font-size: 18px; font-weight: bold; line-height: 2;">
+                &#8226; Web & App Development<br>
+                &#8226; Branding & Graphic Design<br>
+                &#8226; Digital Marketing<br>
+                &#8226; AI-Powered Solutions
+            </div>
+        </div>
     </div>
 
     <div class="right">
-        <div class="circle">
-            <img src="pexels-photo-3184291.jpeg" alt="Office">
+        <div class="circle-container">
+            <div class="circle c1"><img src="pexels-photo-3184291.jpeg" alt="Image 1"></div>
+            <div class="circle c2"><img src="pexels-photo-3184299.jpeg" alt="Image 2"></div>
+            <div class="circle c3"><img src="pexels-sora-shimazaki-5673488.jpg" alt="Image 3"></div>
         </div>
 
-        <div class="circle1">
-            <img src="pexels-photo-3184299.jpeg" alt="Handshake">
-        </div>
-
-        <div class="circle2">
-            <img src="pexels-sora-shimazaki-5673488.jpg" alt="Meeting">
-        </div>
-
-          <div class="contact">
-            <img class="tel-icon" src="ChatGPT Image Jan 25, 2026, 07_54_31 PM.png">
+        <a href="tel:8595966733" class="contact-pill">
+            <img class="tel-icon" src="ChatGPT Image Jan 25, 2026, 07_54_31 PM.png" alt="Phone">
             <div class="contact-text">
-                <p class="contact-info"><b>Contact Us</b></p>
-                <a class="contact-info" href="tel:8595966733">859-596-6733</a>
+                <b>Contact Us</b>
+                <span>859-596-6733</span>
             </div>
-        </div>
+        </a>
     </div>
-
 </div>
 
 </body>
 </html>
-
-
-
